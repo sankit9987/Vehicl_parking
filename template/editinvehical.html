@@ -1,0 +1,51 @@
+{% include 'header.html' %}
+<div class="container col-xl-7 mt-5">
+    <table class="table table-hover">
+        <tr>
+            <th>Parking number</th>
+            <td>{{ve.parkingnumber}}</td>
+        </tr>
+        <tr>
+            <th>Owner Name</th>
+            <td>{{ve.ownername}}</td>
+        </tr>
+        <tr>
+            <th>Owner Contact</th>
+            <td>{{ve.ownercontact}}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Compony Name</th>
+            <td>{{ve.vehicalcompony}}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Category</th>
+            <td>{{ve.category}}</td>
+        </tr>
+        <tr>
+            <th>In Time</th>
+            <td>{{ve.intime}}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Status</th>
+            <td>{{ve.status}}</td>
+        </tr>
+        <tr>
+            <th>Vehicle Parking Date</th>
+            <td>{{ve.pdate}}</td>
+        </tr>
+        <form action="" method="post">
+        {% csrf_token %}
+            <tr>
+                <th><label for="ot">Vehicle OutTime:</label></th>
+                <td><input type="time" class="form-control" id="ot" name="ot"></td>
+            </tr>
+            <tr>
+                <th><label for="pc">parking Charge:</label></th>
+                <td><input type="number" class="form-control" id="pc" placeholder="Enter Parking charge" name="pc"></td>
+            </tr>
+            <tr rowspan=2>
+                <td><button type="submit" class="btn btn-primary form-control">Submit</button></td>
+            </tr>
+        </form>
+    </table>
+</div>

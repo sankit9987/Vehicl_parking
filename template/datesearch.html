@@ -1,0 +1,19 @@
+{% include 'header.html' %}
+<div class="container col-xl-7 mt-5">
+    <form action="{% url 'datesearchresult' %}" method="post">
+    {% csrf_token %}
+        <tr><td><h4>Search Vehical Date Between:</h4></td>
+        </tr>
+        <tr>
+            <th><label for="ot">From Date:</label></th>
+            <td><input type="date" class="form-control" id="ot" name="fd"></td>
+        </tr>
+        <tr>
+            <th><label for="pc">To Date:</label></th>
+            <td><input type="date" class="form-control" id="pc" placeholder="Enter Parking charge" name="td"></td>
+        </tr>
+        <tr rowspan=2>
+            <td><button type="submit" class="btn btn-primary mt-3 form-control">Submit</button></td>
+        </tr>
+    </form>
+</div>
